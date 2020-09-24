@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (cDegree) {
+        if (cDegree >= -273) {
+            this.cDegree = cDegree;
+        }
+
+        this.changeToF = function () {
+            return (this.cDegree * 1.8) + 32;
+        }
+        this.changeToK = function () {
+            return this.cDegree + 273;
+        }
+    }
+    let temperature = new Temperature(-275);
+    let fDegree = temperature.changeToF();
+    let kDegree = temperature.changeToK();
+    alert(" Độ F :" + fDegree + " Độ Kenvin: " + kDegree);
+</script>
+</body>
+</html>
